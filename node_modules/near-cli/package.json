@@ -1,0 +1,70 @@
+{
+  "name": "near-cli",
+  "version": "4.0.13",
+  "description": "Simple CLI for interacting with NEAR Protocol",
+  "engines": {
+    "node": ">= 16"
+  },
+  "main": "bin/near-cli.js",
+  "scripts": {
+    "pretest": "rm -rf tmp-project",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest",
+    "test:integration": "bash ./test/index.sh",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "start": "node bin/near-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/near/near-cli.git"
+  },
+  "author": "Jane Degtiareva",
+  "license": "(MIT AND Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/near/near-cli/issues"
+  },
+  "homepage": "https://github.com/near/near-cli#readme",
+  "bin": {
+    "near": "bin/near"
+  },
+  "devDependencies": {
+    "danger": "^11.3.1",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "lodash": "^4.17.21",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@ledgerhq/hw-transport-node-hid": "^6.28.4",
+    "ascii-table": "^0.0.9",
+    "bs58": "^5.0.0",
+    "chalk": "^4.1.2",
+    "flagged-respawn": "^2.0.0",
+    "is-ci": "^3.0.1",
+    "near-api-js": "^3.0.2",
+    "near-ledger-js": "^0.2.1",
+    "near-seed-phrase": "^0.2.0",
+    "open": "^8.4.2",
+    "stoppable": "^1.1.0",
+    "tcp-port-used": "^1.0.2",
+    "update-notifier": "^5.1.0",
+    "v8flags": "^4.0.1",
+    "yargs": "^17.7.2"
+  },
+  "keywords": [
+    "blockchain",
+    "crypto",
+    "dapps",
+    "distributed",
+    "applications",
+    "distributed applications"
+  ],
+  "files": [
+    "bin",
+    "commands",
+    "middleware",
+    "utils",
+    "config.js"
+  ]
+}
